@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:toolbeltqrcodescanner/pages/about_page.dart';
+import 'package:toolbeltqrcodescanner/pages/home_page.dart';
 
 void main() {
-  runApp(const Home());
+  runApp(const QrCodeScanner());
 }
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class QrCodeScanner extends StatelessWidget {
+  const QrCodeScanner({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const HomePage(),
+        routes: {
+          '/home': (context) => const HomePage(),
+          '/about': (context) => const AboutPage(),
+        });
   }
 }
