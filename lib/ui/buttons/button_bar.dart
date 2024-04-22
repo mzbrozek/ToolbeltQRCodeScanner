@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toolbeltqrcodescanner/constants/constants.dart';
 
 import '../spacers/spacers_horizontal.dart';
 import 'button_copy_to_clipboard.dart';
@@ -17,6 +18,12 @@ class ButtonBarOptions extends StatelessWidget {
     return Center(
       child: DecoratedBox(
         decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+                color: Colors.grey.shade600,
+                spreadRadius: 1,
+                blurRadius: borderBlurRadius)
+          ],
           color: Colors.blue,
           borderRadius: BorderRadius.circular(25),
         ),
